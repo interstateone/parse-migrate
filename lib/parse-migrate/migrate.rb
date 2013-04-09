@@ -158,6 +158,8 @@ module Migrate
 
     def run
       @classes.each do |class_name|
+        # API doesn't allow fetching Installation classes
+        next if class_name == "_Installation"
         if class_name == "_User"
           migrate(class_name, &@user_block)
         else
