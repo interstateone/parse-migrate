@@ -2,6 +2,8 @@
 
 Easier migration for your Parse.com data
 
+Note: There is currently a limit of 11 000 objects of a single class that can be migrated between apps. This is due to an API limitation when batch retrieving objects of 1000 objects per page, and 11 pages.
+
 ## Usage
 
 Export your app info to the environment:
