@@ -1,6 +1,6 @@
 # parse-migrate
 
-Easier migration for your Parse data
+Easier migration for your Parse.com data
 
 ## Usage
 
@@ -16,9 +16,9 @@ export STAGING_MASTER_KEY="youandme"
 then:
 
 ```
-load "migrate.rb"
+require "parse-migrate"
 
-migrate = Migrate.new(["_User", "Location", "Photo"])
+migrate = Migrate::Migrator.new(["_User", "Location", "Photo"])
 
 migrate.file_types = {
   "photo" => "image/jpeg"
