@@ -7,9 +7,9 @@ Easier migration for your Parse.com data
 Export your app info to the environment:
 
 ```
+export PRODUCTION_APP_ID="123"
 export PRODUCTION_API_KEY="abc"
-export STAGING_APP_ID="123"
-export STAGING_API_KEY="doremi"
+export STAGING_APP_ID="doremi"
 export STAGING_MASTER_KEY="youandme"
 ```
 
