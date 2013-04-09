@@ -2,6 +2,12 @@ require "parse-ruby-client"
 require "logger"
 require "yaml"
 
+class String
+  def uncapitalize
+    self[0, 1].downcase + self[1..-1]
+  end
+end
+
 module Migrate
   class Migrator
     attr_accessor :file_types
@@ -29,9 +35,8 @@ module Migrate
       end
 
       # Relates class names to field names for relationships in other classes
-      # If you don't follow this naming convention, this won't work
-      # @class_keys = {"_User" => "user", etc.}
-      @class_keys = Hash[@classes.collect { |c| [c, c.gsub(/[^0-9A-Za-z]/, '').downcase] }]
+      # @class_keys = {"_User" => "user", "UserGroup" => "userGroup"}
+      @class_keys = Hash[@classes.collect { |c| [c, c.gsub(/[^0-9A-Za-z]/, '').uncapitalize] }]
 
       # Tracks old/new object ids for updating the new app
       # old Parse::Object.parse_object_id => new Parse::Object.pointer
