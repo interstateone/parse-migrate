@@ -1,8 +1,8 @@
-load "migrate.rb"
+require "parse-migrate"
 
 # List classes in order of relationship dependencies
 # Parse doesn't provide an endpoint for class lists, so no cheating
-migrate = Migrate.new(["_User", "Location", "Photo"])
+migrate = Migrate::Migrator.new(["_User", "Location", "Photo"])
 
 # Parse/S3 may not provide explicit MIME types when fetching
 # Provide the proper MIME type for the relationship field name

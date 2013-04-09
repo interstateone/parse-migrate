@@ -5,7 +5,7 @@ require 'parse-migrate/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'parse-migrate'
-  spec.version       = ParseMigrate::VERSION
+  spec.version       = Migrate::VERSION
   spec.authors       = ['Brandon Evans']
   spec.email         = ['brandon@brandonevans.ca']
   spec.description   = 'Easier migration for your Parse data'
