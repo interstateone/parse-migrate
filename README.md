@@ -2,6 +2,8 @@
 
 Easier migration for your Parse.com data
 
+[![Code Climate](https://codeclimate.com/github/interstateone/parse-migrate.png)](https://codeclimate.com/github/interstateone/parse-migrate) [![Dependency Status](https://gemnasium.com/interstateone/parse-migrate.png)](https://gemnasium.com/interstateone/parse-migrate)
+
 Note: There is currently a limit of 11 000 objects of a single class that can be migrated between apps. This is due to an API limitation when batch retrieving objects of 1000 objects per page, and 11 pages.
 
 ## Usage
